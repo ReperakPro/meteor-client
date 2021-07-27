@@ -22,7 +22,7 @@ public class ReloadCommand extends Command {
     public void build(LiteralArgumentBuilder<CommandSource> builder) {
         builder.executes(context -> {
             Systems.load();
-            Capes.init();
+            //Capes.init();
 
             return SINGLE_SUCCESS;
         });

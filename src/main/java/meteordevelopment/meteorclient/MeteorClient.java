@@ -80,8 +80,8 @@ public class MeteorClient implements ClientModInitializer {
 
         Systems.addPreLoadTask(() -> {
             if (!Modules.get().getFile().exists()) {
-                Modules.get().get(DiscordPresence.class).toggle(false);
-                Utils.addMeteorPvpToServerList();
+                //Modules.get().get(DiscordPresence.class).toggle(false);
+                //Utils.addMeteorPvpToServerList();
             }
         });
 
@@ -91,7 +91,7 @@ public class MeteorClient implements ClientModInitializer {
         Outlines.init();
 
         MeteorExecutor.init();
-        Capes.init();
+        //Capes.init();
         RainbowColors.init();
         BlockIterator.init();
         EChestMemory.init();
@@ -144,7 +144,7 @@ public class MeteorClient implements ClientModInitializer {
 
     @EventHandler
     private void onTick(TickEvent.Post event) {
-        Capes.tick();
+        //Capes.tick();
 
         if (screenToOpen != null && mc.currentScreen == null) {
             mc.openScreen(screenToOpen);
